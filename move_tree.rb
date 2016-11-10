@@ -11,6 +11,7 @@ class MoveTree
     @root = Move.new(coords[0], coords[1], 0, [])
     @max = max
     @total_moves = 0
+    build
   end
 
   def build
