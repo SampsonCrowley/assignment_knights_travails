@@ -3,10 +3,10 @@ require_relative 'knight_searcher'
 bfstime = 0
 dfstime = 0
 
-10000.times do
+100.times do
   start = [rand(7), rand(7)]
   target = [rand(7), rand(7)]
-  tree = MoveTree.new(start, rand(5))
+  tree = MoveTree.new(start, rand(10))
   knight = KnightSearcher.new(tree)
   bfstime += knight.bfs_for(target, false)
 

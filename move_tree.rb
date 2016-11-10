@@ -16,9 +16,8 @@ class MoveTree
 
   def build
     queue = [root]
-    until queue.length == 0 
-      position = queue.shift
-      MOVELIST.map do |move|
+    while position = queue.shift
+      MOVELIST.each do |move|
         new_x = position.x + move[0]
         new_y = position.y + move[1]
 
@@ -30,7 +29,7 @@ class MoveTree
             @total_moves += 1
           end
         end
-        
+
       end
     end
   end
